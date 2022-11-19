@@ -46,4 +46,17 @@ typedef pair<int, int>                 pii;
 typedef pair<int, string>              pis;
 typedef pair<string, int>              psi;
 
+// ------------------- ここも設定してください！！！！！ -------------------
+typedef float input_data_type;  // 入力データの型 整数型32bit
+typedef float output_data_type; // 出力データの型 浮動小数型32bit
+
+typedef vector<input_data_type>                  vidt;
+typedef vector<vector<input_data_type>>          vvidt;
+typedef vector<vector<vector<input_data_type>>>  vvvidt;
+typedef vector<output_data_type>                 vodt;
+typedef vector<vect<output_data_type>>           vvodt;
+typedef vector<vector<vector<output_data_type>>> vvvodt;
+
+// -------------------------- プロトタイプ宣言 --------------------------
+
 #endif
