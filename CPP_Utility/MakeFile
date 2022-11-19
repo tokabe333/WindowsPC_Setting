@@ -1,0 +1,63 @@
+# コンパイラ
+CC = g++
+
+# コンパイルオプション
+CFLAGS = -std=gnu++17  -pthread -O2
+
+# 実行ファイル名
+TARGET = hogehoge.exe
+
+# コンパイル対象のソースコード
+SRCS = hogehoge.cpp
+
+# ライブラリ関係
+INCDIR = -I./
+LIBDIR = 
+LIBS = 
+
+# オブジェクトファイル名
+OBJS = $(SRCS:.cpp=.o)
+
+
+# ターゲットファイル生成
+$(TARGET): $(OBJS)
+	@echo OBJS_SRCS
+	@echo $(OBJS)
+	@echo $(SRCS)
+	$(CC)  -o  $@ $^  $(LIBDIR) $(LIBS)
+
+
+# オブジェクトファイル生成
+$(OBJS): $(SRCS)
+	@echo hogehoge
+	$(CC)  $(CFLAGS)  $(INCDIR) -c $(SRCS)
+
+# "make all" で make clean と make を同時に実行
+all: clean $(OBJS) $(TARGET) 
+
+# "make all_run" で make all と ファイル実行
+all_run: clean run
+
+# 打ち間違いが多いので
+run_all: all_run
+
+# デバッグコンパイル
+debug: clean d$(OBJS) $(TARGET)
+
+
+run: $(OBJS) $(TARGET)
+ifeq ($(OS), Windows_NT)
+	$(TARGET)
+else 
+	./$(TARGET)
+endif 
+
+# .o .exe .d ファイルを削除
+clean:
+ifeq ($(OS), Windows_NT)
+		del $(OBJS) $(TARGET) *.d *.o
+else 
+		rm -rf $(OBJS) $(TARGET) *.d *.o 
+endif 
+
+
