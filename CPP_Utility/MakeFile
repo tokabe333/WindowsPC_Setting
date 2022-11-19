@@ -2,13 +2,18 @@
 CC = g++
 
 # コンパイルオプション
-CFLAGS = -std=gnu++17  -pthread -O2
+CFLAGS = -std=gnu++17 -pthread -O2 
+DCFLAGS = -std=gnu++17 -pthread -O2 -g
+
 
 # 実行ファイル名
-TARGET = hogehoge.exe
+TARGET = CorrectOutsideLung.exe
 
 # コンパイル対象のソースコード
-SRCS = hogehoge.cpp
+SRCS = Main.cpp
+SRCS += MultithreadWorker.cpp 
+SRCS += CorrectOutsideWFS.cpp
+
 
 # ライブラリ関係
 INCDIR = -I./
@@ -21,16 +26,16 @@ OBJS = $(SRCS:.cpp=.o)
 
 # ターゲットファイル生成
 $(TARGET): $(OBJS)
-	@echo OBJS_SRCS
-	@echo $(OBJS)
-	@echo $(SRCS)
 	$(CC)  -o  $@ $^  $(LIBDIR) $(LIBS)
 
 
 # オブジェクトファイル生成
 $(OBJS): $(SRCS)
-	@echo hogehoge
 	$(CC)  $(CFLAGS)  $(INCDIR) -c $(SRCS)
+
+# デバッグオブジェクトファイル生成
+d$(OBJS): $(SRCS)
+	$(CC)  $(DCFLAGS)  $(INCDIR) -c $(SRCS)
 
 # "make all" で make clean と make を同時に実行
 all: clean $(OBJS) $(TARGET) 
