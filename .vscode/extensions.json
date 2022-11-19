@@ -1,0 +1,29 @@
+{
+	"recommendations": [
+		// リモート関連
+		"ms-vscode-remote.remote-ssh",
+		"ms-vscode-remote.remote-ssh-edit",
+		"ms-vscode-remote.remote-wsl",
+		// 表示関連
+		"James-Yu.latex-workshop",
+		"tomoki1207.pdf",
+		"eamodio.gitlens",
+		// LaTeX
+		"bierner.markdown-preview-github-styles",
+		// Python
+		"njpwerner.autodocstring",
+		"ms-python.python",
+		"ms-python.vscode-pylance",
+		"donjayamanne.python-environment-manager",
+		"donjayamanne.python-extension-pack",
+		// C++
+		"ms-vscode.cpptools",
+		"ms-vscode.cpptools-extension-pack",
+		"ms-vscode.cpptools-themes",
+		"twxs.cmake",
+		"ms-vscode.cmake-tools",
+		// その他
+		"tonybaloney.vscode-pets",
+		"formulahendry.code-runner"
+	]
+}
