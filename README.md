@@ -32,7 +32,6 @@
 
 ## WSL and LaTeX設定
 
-
 ### TeX Environments
 
 | Subject | Text | 
@@ -49,7 +48,7 @@
 5. 以降は **ctrl + s** を押す度に自動でコンパイルされる<br>
 	VS Codeを起動するたびにこの過程が必要です(良い方法があれば教えてください)
 
-### Installation(?) -- How to make LaTeX Environment on your PC.
+## Installation(?) -- How to make LaTeX Environment on your PC.
 
 **保存するたびに自動コンパイルされる環境をローカルで作る** <br>
 
