@@ -116,7 +116,7 @@
 	gpg -k
 	``` 
 5. 	```
-	git config --global gpg.program `which gpg`
+	git config --global gpg.program <my gpg.exe path>
 	git config --global commit.gpgsign true
 	git config --global user.signingkey "<my key id>"
 	```
