@@ -106,8 +106,10 @@
 	```
 	config等は.sshに含まれているため記述不要
 
-3. ---ここからGPG--- <br>
-	[GPG for Windows](https://gpg4win.org/get-gpg4win.html)のダウンロード & インストール
+3. ---------- ここからGPG ---------- <br>
+	- [GPG for Windows](https://gpg4win.org/get-gpg4win.html)のダウンロード & インストール  
+	<br> もしくは <br>
+	- 環境変数に ```C:\Program Files\Git\usr\bin``` を追加
 4. gpg鍵の登録 & IDの確認 <br>
 	OneDrive/_PC_Setting/.gnupg に移動
 	```
@@ -119,6 +121,7 @@
 	git config --global commit.gpgsign true
 	git config --global user.signingkey "<my key id>"
 	```
+	my gpg.exe path には C:/Program Files/Git/usr/bin/gpg がデフォルトでは入るはず
 6. CUIで鍵を使えるように(UNIX系) .bashrcに以下を記述 <br>
 	```
 	export GPG_TTY=$(tty)
